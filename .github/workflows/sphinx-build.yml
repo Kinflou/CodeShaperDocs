@@ -31,6 +31,7 @@ jobs:
         find ./gh-pages -mindepth 1 -not -regex "^\.\/gh-pages\/\.git.*" -delete
         cp -r _build/html/* gh-pages/
         cd gh-pages
+        touch .nojekyll
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add .
