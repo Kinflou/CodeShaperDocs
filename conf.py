@@ -46,7 +46,6 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # a list of builtin themes.
 #
 
-html_title = 'Documentation'
 html_logo = "_static/img/logos/codeshaper/logo-only.png"
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
@@ -54,7 +53,7 @@ html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 html_context = {
   'display_github': True,
   'github_user': 'OriDevTeam',
-  'github_repo': 'CodeShaperSphinx',
+  'github_repo': 'CodeShaperDocs',
   'github_version': 'master/docs/',
 }
 

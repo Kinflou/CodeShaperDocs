@@ -1,3 +1,8 @@
+.. raw:: html
+
+   <h3 style="background-color:DimGray;text-align:center">📚 Estimated reading time: 40 seconds</h3>
+
+
 Introduction
 =============
 
@@ -7,8 +12,7 @@ Introduction
     :caption: Introduction
     :name: toc-introduction
 	
-    Test
-    Another Test
+    Using CodeShaper
 
 
 Ever came across having to make changes to code that Regex (Regular Expressions) can't cover, like
@@ -26,11 +30,8 @@ Currently, it only supports these grammars:
  - `CPP14 (C++ 14) Grammar <https://github.com/antlr/grammars-v4/tree/master/cpp>`_
 
 
-Downloading
-############
-
 If you don't have the application yet, you can download in the
-`Releases <https://github.com/OriDevTeam/CodeShaperPy/releases>`_
+`Releases <https://github.com/OriDevTeam/CodeShaper/releases>`_
 
 Mind that the application does not update itself, so you have to check
 for the latest releases that have bugfixes and improvements

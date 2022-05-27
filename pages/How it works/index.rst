@@ -8,5 +8,4 @@ How it works
     :name: toc-how-it-works
 
     Processing/index
-    Creating/index
-
+    Examples/index
