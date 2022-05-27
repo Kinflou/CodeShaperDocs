@@ -11,6 +11,14 @@
 .. toctree::
    :hidden:
    :maxdepth: 1
+   :caption: Going Deeper
+   :name: main-going-deeper
+
+   pages/Developing/index
+
+.. toctree::
+   :hidden:
+   :maxdepth: 1
    :caption: Contributing
    :name: contributing-toc
 
@@ -26,7 +34,7 @@ Welcome to the documentation of the open source tool that automates code changes
 
 .. raw:: html
 
-   <h3 style="background-color:DarkGray;text-align:center">📖 Get introduced to the basic concepts in around 8 minutes</h3>
+   <h3 style="background-color:DimGray;text-align:center">📖 Get introduced to the basic concepts in around 8 minutes</h3>
 
 Press the button at the bottom right, it will lead you the organized navigation
 of the introduction
