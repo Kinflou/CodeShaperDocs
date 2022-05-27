@@ -1,2 +1,0 @@
-# CodeShaperDocs
- Documentation for CodeShaper

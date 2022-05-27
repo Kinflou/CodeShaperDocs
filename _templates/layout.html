@@ -1,9 +1,0 @@
-{% extends "!layout.html" %}
-{% block document %}
-
-    {% if page_read_time %}
-        <h3 style="background-color:DarkGray;text-align:center">{{ page_read_time }}</h3>
-    {% endif %}
-
-    {{ super() }}
-{% endblock %}
