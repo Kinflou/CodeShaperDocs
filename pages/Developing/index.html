@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Introduction &mdash; CodeShaper  documentation</title>
+  <title>Developing &mdash; CodeShaper  documentation</title>
       <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../../_static/css/custom.css" type="text/css" />
@@ -22,8 +22,8 @@
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="next" title="Using CodeShaper" href="Using%20CodeShaper.html" />
-    <link rel="prev" title="Home" href="../../index.html" /> 
+    <link rel="next" title="Creating" href="Creating/index.html" />
+    <link rel="prev" title="Function Name Correction" href="../How%20it%20works/Examples/Function%20Name%20Correction.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -43,10 +43,10 @@
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <p class="caption" role="heading"><span class="caption-text">Home</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="Using%20CodeShaper.html">Using CodeShaper</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="Using%20CodeShaper.html#configurations">Configurations</a></li>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../Introduction/index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../Introduction/Using%20CodeShaper.html">Using CodeShaper</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Introduction/Using%20CodeShaper.html#configurations">Configurations</a></li>
 </ul>
 </li>
 </ul>
@@ -91,11 +91,11 @@
 </li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Going Deeper</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../Developing/index.html">Developing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../Developing/Creating/index.html">Creating</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../Developing/Creating/Writing%20a%20Shaper.html">Writing a Shaper</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../Developing/Creating/Writing%20a%20Shaper.html#builder">Builder</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Developing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="Creating/index.html">Creating</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="Creating/Writing%20a%20Shaper.html">Writing a Shaper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="Creating/Writing%20a%20Shaper.html#builder">Builder</a></li>
 </ul>
 </li>
 </ul>
@@ -118,9 +118,9 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
-      <li>Introduction</li>
+      <li>Developing</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/OriDevTeam/CodeShaperDocs/blob/master/docs/pages/Introduction/index.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/OriDevTeam/CodeShaperDocs/blob/master/docs/pages/Developing/index.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -132,28 +132,10 @@
     
            <div itemprop="articleBody">
              
-  <h3 style="background-color:DimGray;text-align:center">📚 Estimated reading time: 40 seconds</h3><div class="section" id="introduction">
-<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound" id="toc-introduction">
+  <div class="section" id="developing">
+<h1>Developing<a class="headerlink" href="#developing" title="Permalink to this headline">¶</a></h1>
+<div class="toctree-wrapper compound" id="toc-developing">
 </div>
-<p>Ever came across having to make changes to code that Regex (Regular Expressions) can’t cover, like
-transforming the name of a function and its arguments, or changing a piece of the body
-without breaking  nesting? this is where this tool shines and makes it easy!</p>
-<p>CodeShaper is a tool that loads a given project or single code file, parses its AST (Abstract Syntax Tree)
-so you can transform any code that you wish, going to the very small details</p>
-<p>It uses <a class="reference external" href="https://www.antlr.org/">ANtlr4</a> along the required
-<a class="reference external" href="https://github.com/antlr/grammars-v4/">Antlr4 Grammars</a>
-to parse the contents of the code file that any type of project is related to</p>
-<dl class="simple">
-<dt>Currently, it only supports these grammars:</dt><dd><ul class="simple">
-<li><p><a class="reference external" href="https://github.com/antlr/grammars-v4/tree/master/cpp">CPP14 (C++ 14) Grammar</a></p></li>
-</ul>
-</dd>
-</dl>
-<p>If you don’t have the application yet, you can download in the
-<a class="reference external" href="https://github.com/OriDevTeam/CodeShaper/releases">Releases</a></p>
-<p>Mind that the application does not update itself, so you have to check
-for the latest releases that have bugfixes and improvements</p>
 </div>
 
 
@@ -161,8 +143,8 @@ for the latest releases that have bugfixes and improvements</p>
           </div>
 
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../../index.html" class="btn btn-neutral float-left" title="Home" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="Using%20CodeShaper.html" class="btn btn-neutral float-right" title="Using CodeShaper" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../How%20it%20works/Examples/Function%20Name%20Correction.html" class="btn btn-neutral float-left" title="Function Name Correction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Creating/index.html" class="btn btn-neutral float-right" title="Creating" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
