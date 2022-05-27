@@ -1,0 +1,9 @@
+{%- if show_source and has_source and sourcename %}
+
+  <ul class="this-page-menu">
+	  {%- if page_read_time %}
+		<li>Estimated read time: {{ page_read_time }}<li>
+	  {%- endif %}
+  </ul>
+
+{%- endif %}
