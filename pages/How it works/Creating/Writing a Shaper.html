@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Writing a Shaper &mdash; Documentation</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/custom.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/algolia.css" type="text/css" />
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/rtd_dark.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/js/external-hyperlinks.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="prev" title="Creating" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../../index.html" class="icon icon-home"> CodeShaper
+            <img src="../../../_static/logo-only.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Home</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../Introduction/index.html">Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/Test.html">Test</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../Introduction/index.html#downloading">Downloading</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">How it works</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../Processing/index.html">Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../Processing/Target.html">Target</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Target.html#parsing-visual-studio-solution">Parsing Visual Studio Solution</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Target.html#parsing-visual-studio-project">Parsing Visual Studio Project</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Processing/Visitor.html">Visitor</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Visitor.html#visiting-a-cpp-module">Visiting a CPP Module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Visitor.html#shaping-the-module">Shaping the module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Processing/Actions.html">Actions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Actions.html#building-the-builders">Building the builders</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Processing/Actions%20Definitions.html">Actions Definitions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Actions%20Definitions.html#builder">Builder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Actions%20Definitions.html#resolver">Resolver</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Actions%20Definitions.html#replacement">Replacement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Actions%20Definitions.html#addition">Addition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Actions%20Definitions.html#subtraction">Subtraction</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Actions%20Definitions.html#references">References:</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Actions%20Definitions.html#legend">Legend</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../Processing/Expressions.html">Expressions</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../Processing/Expressions.html#expression-groups">Expression Groups</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Creating</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Writing a Shaper</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#builder">Builder</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">CodeShaper</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../index.html">How it works</a> &raquo;</li>
+          <li><a href="index.html">Creating</a> &raquo;</li>
+      <li>Writing a Shaper</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/OriDevTeam/CodeShaperSphinx/blob/master/docs/pages/How it works/Creating/Writing a Shaper.md" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+
+    
+        <h3 style="background-color:DarkGray;text-align:center">📚 Estimated reading time: 15 seconds</h3>
+    
+
+    
+           <div itemprop="articleBody">
+             
+  <div class="section" id="writing-a-shaper">
+<h1>Writing a Shaper<a class="headerlink" href="#writing-a-shaper" title="Permalink to this headline">¶</a></h1>
+<p>Currently and probably the only supported format for a shaper
+is <a class="reference external" href="https://hjson.github.io/">Human Json (HJSON)</a></p>
+<p>The expected schema for a shaper file cam be seen below, but first comes an explanation:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;project&quot;</span> <span class="p">(</span><span class="n">string</span><span class="p">):</span> <span class="n">VCX</span> <span class="n">Project</span> <span class="n">Alias</span> <span class="p">(</span><span class="n">the</span> <span class="n">alias</span> <span class="n">provided</span> <span class="k">for</span> <span class="n">a</span> <span class="n">project</span> <span class="n">name</span><span class="p">)</span>
+    <span class="s2">&quot;file&quot;</span> <span class="p">(</span><span class="n">string</span><span class="o">/</span><span class="n">array</span><span class="p">):</span> <span class="n">Name</span> <span class="ow">or</span> <span class="n">Names</span> <span class="n">of</span> <span class="n">the</span> <span class="n">files</span> <span class="n">to</span> <span class="n">shape</span>
+    <span class="s2">&quot;actions&quot;</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span> <span class="n">A</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">actions</span> <span class="n">that</span> <span class="n">can</span> <span class="n">be</span> <span class="n">taken</span> <span class="n">to</span> <span class="n">shape</span> <span class="n">text</span>
+    <span class="p">{</span>
+        <span class="s2">&quot;builders&quot;</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span> <span class="n">A</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">builders</span> <span class="n">that</span> <span class="n">build</span> <span class="n">text</span> <span class="n">based</span> <span class="n">on</span> <span class="n">captures</span>
+        <span class="s2">&quot;resolvers (dict): A collection of resolvers that provide constant pieces of text</span>
+        <span class="s2">&quot;replacements&quot;</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span> <span class="n">A</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">replacers</span> <span class="n">that</span> <span class="n">replace</span> <span class="n">text</span> <span class="n">captured</span>
+        <span class="s2">&quot;additions&quot;</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span> <span class="n">A</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">additions</span> <span class="n">that</span> <span class="n">add</span> <span class="n">text</span> <span class="n">regarding</span> <span class="n">captured</span> <span class="n">text</span>
+        <span class="s2">&quot;subtractions&quot;</span> <span class="p">(</span><span class="nb">dict</span><span class="p">):</span> <span class="n">A</span> <span class="n">collection</span> <span class="n">of</span> <span class="n">subtracters</span> <span class="n">that</span> <span class="n">remove</span> <span class="n">captured</span> <span class="n">text</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>And the expected schema format</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="s2">&quot;project&quot;</span><span class="p">:</span> <span class="n">_project_alias_</span>
+    <span class="s2">&quot;file&quot;</span><span class="p">:</span> <span class="n">_file_name_</span>
+    <span class="s2">&quot;actions&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;replacements&quot;</span><span class="p">:</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+        <span class="s2">&quot;additions&quot;</span><span class="p">:</span> <span class="p">{</span><span class="o">...</span><span class="p">}</span>
+        <span class="s2">&quot;subtractions: {...}</span>
+        <span class="s2">&quot;resolvers: {...}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<div class="section" id="builder">
+<h2>Builder<a class="headerlink" href="#builder" title="Permalink to this headline">¶</a></h2>
+<p>The builder schema is has following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>{
+    *&quot;location&quot; (enum string): Location where to start building from
+    ?&quot;reference_location (enum string): A reference location that should match simulatenously 
+    ?&quot;reference&quot; (string): Regex Expression to match for the reference location
+    *&quot;build (string)&quot;: Builder Expression to builder to build a string
+}
+</pre></div>
+</div>
+<p><strong>Notes:</strong></p>
+<p>*: Required</p>
+<p>?: Optional</p>
+<p><strong>References:</strong></p>
+<p><a class="reference external" href="https://github.com/OriDevTeam/CodeShaper/blob/9d6d056e88d06157897208277c0dba8991c36478/Lib/Shapers/CPP/CPPPatch.cs#L111">Locations Enum</a></p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Creating" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, CodeShaper.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
