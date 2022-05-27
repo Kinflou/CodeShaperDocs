@@ -28,7 +28,7 @@ jobs:
     - name: Commit documentation changes
       run: |
         git clone https://github.com/OriDevTeam/CodeShaperDocs.git --branch gh-pages --single-branch gh-pages
-        find ./gh-pages -mindepth 1 -not -regex "^\.\/_site\/\.git.*" -delete
+        find ./gh-pages -mindepth 1 -not -regex "^\.\/_gh-pages\/\.git.*" -delete
         cp -r _build/html/* gh-pages/
         cd gh-pages
         git config --local user.email "action@github.com"
